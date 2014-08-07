@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <display-name>Archetype Created Web Application</display-name>
+    <!--В этом файле описывается соответствие ссылок(кнопок) с контроллерами, которые их обрабатывают-->
+    <servlet>
+        <servlet-name>singIn</servlet-name>
+        <servlet-class>net.savka.controllers.UserLoginController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>singIn</servlet-name>
+        <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>singOut</servlet-name>
+        <servlet-class>net.savka.controllers.UserLogoutController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>singOut</servlet-name>
+        <url-pattern>/logout.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>registerController</servlet-name>
+        <servlet-class>net.savka.controllers.RegisterNewUserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerController</servlet-name>
+        <url-pattern>/register.do</url-pattern>
+    </servlet-mapping>
+</web-app>
